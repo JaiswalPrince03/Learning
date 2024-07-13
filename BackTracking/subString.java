@@ -1,18 +1,21 @@
-// package BackTracking;
-import java.util.*;
+package BackTracking;
+import java.util.Scanner;
+
 public class subString {
-    public static void PrintSubString(String str, String ans, int n,int index){
-        if(index == n){
+    public static void printSubStrings(String str, String ans, int n, int index) {
+        if (index == n) {
             System.out.println(ans);
             return;
         }
-        PrintSubString(str, ans, n, index+1);
-        PrintSubString(str, ans+str.charAt(index), n, index+1);
+        printSubStrings(str, ans, n, index + 1);
+        printSubStrings(str, ans + str.charAt(index), n, index + 1);
     }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        int n = str.length();
-        PrintSubString(str, "", n, 0);
+        try (Scanner scanner = new Scanner(System.in)) {
+            String str = scanner.nextLine();
+            int n = str.length();
+            printSubStrings(str, "", n, 0);
+        }
     }
 }

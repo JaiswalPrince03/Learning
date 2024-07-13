@@ -1,4 +1,4 @@
-package Learning.LinkedList;
+package LinkedList;
 
 public class ListNode {
 

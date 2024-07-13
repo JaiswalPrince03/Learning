@@ -1,5 +1,7 @@
 package Trees;
 
+import Trees.morrisTraversal.TreeNode;
+
 public class Lc236 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if(root==null) return null;

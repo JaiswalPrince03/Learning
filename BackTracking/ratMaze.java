@@ -1,7 +1,4 @@
-
-
-
-// package BackTracking;
+package BackTracking;
 
 public class ratMaze {
     public static boolean rIAM(int matrix[][], int r, int c, int n, int m, int path[][]) {

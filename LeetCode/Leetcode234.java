@@ -1,19 +1,18 @@
-package Learning.LinkedList;
+import LinkedList.ListNode;
 
 public class Leetcode234 {
 
     public boolean isPalindrome(ListNode head) {
         ListNode mid = head;
         ListNode end = head;
-        while (end != null) {
+        while (end != null && end.next != null) {
             mid = mid.next;
             end = end.next.next;
         }
         ListNode prev = null;
         ListNode current = mid;
-        ListNode next = null;
         while (current != null) {
-            next = current.next;
+            ListNode next = current.next;
             current.next = prev;
             prev = current;
             current = next;
@@ -21,11 +20,10 @@ public class Leetcode234 {
         ListNode p1 = head;
         ListNode p2 = prev;
         while (p2 != null) {
-            if (p1.val != p2.val)
-                return false;
+            if (p1.val != p2.val) return false;
+            p1 = p1.next;
+            p2 = p2.next;
         }
-        p1=p1.next
         return true;
     }
-
 }

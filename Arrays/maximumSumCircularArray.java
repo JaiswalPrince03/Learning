@@ -1,5 +1,3 @@
-package Arrays;
-
 public class maximumSumCircularArray {
     public static void main(String[] args) {
         int[] nums = {11,2,-5,2,-7,-17,15,9,12,-15,-5,-15,17};

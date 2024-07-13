@@ -1,4 +1,4 @@
-// package BackTracking;
+package BackTracking;
 
 public class nQueen {
     // isSafe function to check if the queen can be placed in the given position

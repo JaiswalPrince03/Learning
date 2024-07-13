@@ -1,20 +1,26 @@
-package Learning.LinkedList;
+import LinkedList.ListNode;
+
 public class Leetcode19 {
     public static ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode p = head, q = head;
-        for(int i=0;i<n;i++){
+        if (head == null) return null;
+        
+        ListNode p = head;
+        int length = 0;
+        while (p != null) {
+            length++;
             p = p.next;
         }
-        if(p==null){
-            head = head.next;
-
+        
+        if (n > length) return head;
+        
+        if (n == length) return head.next;
+        
+        p = head;
+        for (int i = 0; i < length - n - 1; i++) {
+            p = p.next;
         }
-        while(p.next!=null){
-            p=p.next;
-            q=q.next;
-        }
-        q.next = q.next.next;
-        // Additional logic to be implemented here
-        return head; // Placeholder return statement
+        
+        p.next = p.next.next;
+        return head;
     }
 }

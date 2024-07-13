@@ -2,19 +2,21 @@ public class Palindrome {
     public static boolean isPalindrome1(String str[], int left, int right) {
         if (left == right)
             return true;
-        if (str[left] == " ") {
+        if (str[left].equals(" ")) {
             return isPalindrome1(str, left + 1, right);
         }
-        if (str[right] == " ") {
+        if (str[right].equals(" ")) {
             return isPalindrome1(str, left, right - 1);
         }
-        if (str[left] >= 'A' && str[left] <= 'Z') {
-            str[left] = 'a' + str[left] - 'A';
+        char leftChar = str[left].charAt(0);
+        char rightChar = str[right].charAt(0);
+        if (leftChar >= 'A' && leftChar <= 'Z') {
+            leftChar = (char)('a' + leftChar - 'A');
         }
-        if (str[right] >= 'A' && str[right] <= 'Z') {
-            str[right] = str[right] - 'A' + 'a';
+        if (rightChar >= 'A' && rightChar <= 'Z') {
+            rightChar = (char)(rightChar - 'A' + 'a');
         }
-        if (str[left] != str[right]) {
+        if (leftChar != rightChar) {
             return false;
         }
         return isPalindrome1(str, left + 1, right - 1);

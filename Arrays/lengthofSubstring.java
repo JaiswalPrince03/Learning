@@ -1,5 +1,3 @@
-package Arrays;
-
 public class lengthofSubstring {
     public static int lengthOfLongestSubstring(String s) {
         int n = s.length();

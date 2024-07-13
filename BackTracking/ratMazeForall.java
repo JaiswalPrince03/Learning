@@ -1,4 +1,4 @@
-// package BackTracking;
+package BackTracking;
 
 public class ratMazeForall {
     public static void rIAM(int matrix[][], int r, int c, int n, int m, int path[][]) {
@@ -17,22 +17,18 @@ public class ratMazeForall {
             return;
         }
         // recursive case
-        // right move
         path[r][c] = 1;
+        // right move
         if (c + 1 < m && matrix[r][c + 1] == 0) {
             rIAM(matrix, r, c + 1, n, m, path);
-            // return;
         }
         // down move
         if (r + 1 < n && matrix[r + 1][c] == 0) {
             rIAM(matrix, r + 1, c, n, m, path);
-            // return;
         }
         //default case
         path[r][c] = 0;
     }
-
-  
 
     public static void main(String[] args) {
         int path[][] = new int[4][5];

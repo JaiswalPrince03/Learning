@@ -1,5 +1,17 @@
-// package BackTracking;
+package BackTracking;
+
 public class LC36 {
+    public static boolean isValidSudoku(char[][] board) {
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(board[i][j] != '.' && !check(board,i,j)){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public static boolean check(char[][] board,int row,int col){
         //row check
         for(int i=0;i<9;i++){
@@ -25,16 +37,7 @@ public class LC36 {
         }
         return true;
     }
-    public static boolean isValidSudoku(char[][] board) {
-        for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++){
-                if(board[i][j] != '.' && !check(board,i,j)){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+
     public static void main(String[] args) {
         char[][] board = {{'5','3','.','.','7','.','.','.','.'},
                          {'.','.','.','2','4','8','.','.','.'},

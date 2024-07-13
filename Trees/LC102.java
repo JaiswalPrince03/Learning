@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import Trees.morrisTraversal.TreeNode;
+
 public class LC102 {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
@@ -12,8 +14,8 @@ public class LC102 {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            int size = queue.size();
             List<Integer> level = new ArrayList<>();
+            int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 level.add(node.val);

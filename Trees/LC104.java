@@ -1,5 +1,7 @@
 package Trees;
 
+import Trees.morrisTraversal.TreeNode;
+
 public class LC104 {
     public int maxDepth(TreeNode root) {
         if (root == null) {

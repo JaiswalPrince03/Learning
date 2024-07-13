@@ -1,4 +1,4 @@
-package Learning.LinkedList;
+package LinkedList;
 
 public class enQueueAnddeQueue {
     static class Node {
@@ -51,7 +51,7 @@ public class enQueueAnddeQueue {
             if (head == null) {
                 System.out.println("Queue is empty");
             } else {
-                System.out.println("Peeked " + head.data + " at " + head.data);
+                System.out.println("Peeked " + head.data);
             }
         }
 

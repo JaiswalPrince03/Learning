@@ -1,4 +1,4 @@
-// package Trees;
+package Trees;
 
 public class prinTree {
     static class Node {

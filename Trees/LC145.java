@@ -2,8 +2,6 @@ package Trees;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
-
 import javax.swing.tree.TreeNode;
 
 public class LC145 {
