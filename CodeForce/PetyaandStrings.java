@@ -15,11 +15,11 @@ public class PetyaandStrings {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            String s = scanner.nextLine();
 
-        String s = scanner.nextLine();
-
-        String t = scanner.nextLine();
-        comp(s, t);
+            String t = scanner.nextLine();
+            comp(s, t);
+        }
     }
 }

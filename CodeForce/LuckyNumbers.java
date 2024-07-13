@@ -10,11 +10,12 @@ public class LuckyNumbers {
     }
 
     public static void main(String[] args) {
-        // Read the input
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        try (// Read the input
+        Scanner scanner = new Scanner(System.in)) {
+            int n = scanner.nextInt();
 
-        // Compute and print the result
-        System.out.println(maxLuckyNumbers(n));
+            // Compute and print the result
+            System.out.println(maxLuckyNumbers(n));
+        }
     }
 }
