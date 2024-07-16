@@ -13,7 +13,7 @@ public class UndirectedGraphCycle {
             if(visit[i] == 0){
                 if(dfs(adj, visit, i, -1))
                     return true;
-            }
+            } 
         }
         return false;
     }
